@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap');
+
+$primaryFont:'Crimson Text', serif;
+$secondaryFont: 'Work Sans', sans-serif;
+$primaryColor: #8500ED;
+$secondaryColor: #191847;
+$thirdColor: #6C00C1;
+$shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  background-image: url('/1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0rem 1rem 0rem 1rem;
+    
+    ul  {
+      display: flex;
+      list-style: none;
+      font-family: $secondaryFont;
+
+      li  {
+        margin-top: 1rem;
+        a {
+          color: $secondaryColor;
+          font-size: 13px;
+          margin: 0rem 10px 0rem 10px;
+        }
+      }
+    }
+  }
+
+  .section {
+    .row {
+      .col-sm-12, .col-md-8, .col-lg-6 {
+        margin: 5rem 2rem 0rem 2rem;
+        h1 {
+          font-family: $primaryFont;
+          color: $secondaryColor;
+          font-size: 2rem;
+        }
+        p {
+          font-family: $secondaryFont;
+          color: $secondaryColor;
+          font-size: 1rem;
+        }
+
+        button {
+          filter: $shadow;
+          background-color: $primaryColor;
+          color: #fff;
+          font-family: $primaryFont;
+          padding: 0.2rem 1.2em;
+          border: none;
+          border-radius: 0.3rem;
+          outline: none !important;
+          transition: ease-in 0.3s;
+        }
+
+        button:hover {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+}
+
+#second {
+    background-image: url('/2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    padding: 0rem 2rem 5rem 2rem;
+    align-items: center;
+
+    .flex-column, .flex-lg-row {
+    justify-content: space-evenly;
+      .col-12 , .col-lg-4 {
+        background-color: $primaryColor;
+        filter: $shadow;
+        padding: 2rem;
+        border-radius: 0.3rem;
+        margin: 5rem 0rem 5rem 0rem;
+
+        h2, p {
+          color: #fff;
+          font-family: $secondaryFont;
+        }
+      }
+
+      button {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        filter: $shadow;
+        background-color: #fff;
+        color: $secondaryColor;
+        font-family: $primaryFont;
+        padding: 0.2rem 1.2em;
+        border: none;
+        border-radius: 0.3rem;
+        outline: none !important;
+          transition: ease-in 0.3s;
+        }
+        button:hover {
+          transform: scale(1.08);
+        }
+    }
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: $primaryColor;
+  .container {
+    padding: 2rem;
+    .flex-column,  .flex-lg-row {
+      text-align: center;
+      .col-12, .col-lg-4 {
+        h4 {
+          color: #fff;
+          font-family: $secondaryFont;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        ul {
+          line-height: 2rem;
+          padding: 0rem;
+          li {
+            list-style: none;
+            color: #fff;
+            font-weight: 200;
+          }
+        }
+
+        span {
+          background-color: $thirdColor;
+          color: #fff;
+          padding: 0.3rem 3rem;
+          filter: $shadow;
+        }
+
+        ol {
+          background-color: $thirdColor;
+          padding: 0.3rem 3rem;
+          img  {
+            margin: 0rem 4px;
+          }
+        }
+      }
+    }
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    background-color: $thirdColor;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #fff;
+    padding: 1.4rem;
+  }
+}
+
+
+
+// ==============================================================================>
+
+@media (min-width: 992px) {
+  #main {
+  
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0rem 3rem 0rem 3rem;
+      
+      ul  {
+        display: flex;
+        list-style: none;
+        font-family: $secondaryFont;
+  
+        li  {
+          margin-top: 1rem;
+          a {
+            color: $secondaryColor;
+            font-size: 1rem;
+            margin: 0rem 20px 0rem 20px;
+          }
+        }
+      }
+    }
+
+  .section {
+    .row {
+      .col-sm-12, .col-md-8, .col-lg-6 {
+        padding: 3rem;
+        h1 {
+          font-family: $primaryFont;
+          color: $secondaryColor;
+          font-size: 4.1rem !important;
+        }
+        p {
+          font-family: $secondaryFont;
+          color: $secondaryColor;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+  
+  #second {
+    background-image: url('/2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    padding: 0rem 2rem 5rem 2rem;
+  
+    .flex-column, .flex-md-row {
+      display: flex;
+      justify-content: space-evenly;
+      .col-12, .col-lg-4 {
+        max-width: 25%;
+        background-color: $primaryColor;
+        filter: $shadow;
+        padding: 2rem;
+        border-radius: 0.3rem;
+  
+        h2, p {
+          color: #fff;
+          font-family: $secondaryFont;
+        }
+      }
+  
+      button {
+        position: fixed;
+        filter: $shadow;
+        background-color: #fff;
+        color: $secondaryColor;
+        font-family: $primaryFont;
+        padding: 0.2rem 1.2em;
+        border: none;
+        border-radius: 0.3rem;
+        outline: none !important;
+          transition: ease-in 0.3s;
+        }
+        button:hover {
+          transform: scale(1.08);
+        }
+    }
+  }
+  
+  footer {
+  margin-top: 5rem;
+  background-color: $primaryColor;
+  .container {
+    padding: 2rem;
+    .flex-column, .flex-md-row {
+      display: flex;
+      flex-direction: row !important;
+      justify-content: space-evenly;
+      .col-12, .col-lg-4 {
+        h4 {
+          color: #fff;
+          font-family: $secondaryFont;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+  
+        ul {
+          line-height: 2rem;
+          padding: 0rem;
+          li {
+            list-style: none;
+            color: #fff;
+            font-weight: 200;
+          }
+        }
+  
+        span {
+          background-color: $thirdColor;
+          color: #fff;
+          padding: 0.3rem 3rem;
+          filter: $shadow;
+        }
+  
+        ol {
+          background-color: $thirdColor;
+          padding: 0.3rem 3rem;
+          img  {
+            margin: 0rem 4px;
+          }
+        }
+      }
+    }
+  }
+  
+  span {
+    display: flex;
+    justify-content: center;
+    background-color: $thirdColor;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #fff;
+    padding: 1.4rem;
+  }
+}
+  
+}
